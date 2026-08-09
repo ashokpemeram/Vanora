@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased selection:bg-primary/10 selection:text-primary;
+    background-color: #F7F5EE;
+    color: #1F2421;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-wide text-botanical;
+  }
+}
+
+/* Custom Scrollbar styling for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #E7E0D2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7D927C;
+}
+
+/* Custom CSS Helpers for our Editorial Grid layout */
+.fine-border-r {
+  border-right: 1px solid rgba(24, 58, 42, 0.08);
+}
+.fine-border-b {
+  border-bottom: 1px solid rgba(24, 58, 42, 0.08);
+}
+.fine-border-t {
+  border-top: 1px solid rgba(24, 58, 42, 0.08);
+}
+.fine-border-l {
+  border-left: 1px solid rgba(24, 58, 42, 0.08);
+}
+
+.text-stroke-thin {
+  -webkit-text-stroke: 1px rgba(24, 58, 42, 0.15);
+  color: transparent;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
