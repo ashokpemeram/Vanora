@@ -64,8 +64,9 @@ export default function Home() {
               Botanical Lifestyle Design Studio
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-ivory leading-[1.1] font-light">
-              Where Nature Meets <br />
-              <span className="italic font-normal">Refined Living.</span>
+              {/* Where Nature Meets <br />
+              <span className="italic font-normal">Refined Living.</span> */}
+              Premium landscaping in Hyderabad
             </h1>
           </motion.div>
 
