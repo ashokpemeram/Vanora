@@ -1,8 +1,9 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import SeoManager from "./components/SeoManager";
 
 // Pages
 import Home from "./pages/Home";
@@ -15,13 +16,16 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import NotFound from "./pages/NotFound";
 
-function App() {
+// Shell shared between the client router and the prerender (SSR) entry.
+// Do not place router hooks outside of a Router context.
+export function AppShell() {
   return (
-    <Router>
-      {/* Reset window scroll depth on route changes */}
+    <>
+      <SeoManager />
       <ScrollToTop />
-      
+
       <div className="flex flex-col min-h-screen bg-ivory text-charcoal selection:bg-primary/10 selection:text-primary">
         {/* Premium Sticky Navigation Bar */}
         <Navbar />
@@ -39,8 +43,9 @@ function App() {
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
-            {/* Fallback to Home */}
-            <Route path="*" element={<Home />} />
+            <Route path="/404" element={<NotFound />} />
+            {/* Fallback to a real 404 page */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
@@ -50,8 +55,14 @@ function App() {
         {/* Global Footer layout */}
         <Footer />
       </div>
-    </Router>
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
+  );
+}

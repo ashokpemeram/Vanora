@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Send } from "lucide-react";
 import { siteConfig } from "../data/siteData";
@@ -15,17 +15,6 @@ export default function CorporateGifting() {
     message: ""
   });
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    document.title = "Premium Corporate Plant Gifting Hyderabad | Vanora";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Elevate relationships with Vanora's luxury botanical corporate gifting in Hyderabad. Handcrafted planters, custom branding, and healthy living plants for executives."
-      );
-    }
-  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
