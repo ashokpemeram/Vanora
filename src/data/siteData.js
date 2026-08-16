@@ -7,7 +7,7 @@ export const siteConfig = {
   description: "Thoughtfully designed landscapes, curated planting, and sophisticated gifting experiences for homes, businesses, and exceptional occasions in Hyderabad.",
   
   // Live production URL - used for canonical tags, sitemap, Open Graph, and schema markup
-  siteUrl: "https://vanoragardens.com",
+  siteUrl: "https://vanoragardens.in",
 
   // Business identity / NAP (Name, Address, Phone) - kept consistent across schema, footer, and contact
   business: {

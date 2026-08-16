@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vanoragardens.com/sitemap.xml
+Sitemap: https://vanoragardens.in/sitemap.xml
