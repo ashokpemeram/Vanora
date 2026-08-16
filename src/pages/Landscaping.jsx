@@ -1,21 +1,7 @@
-import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Check } from "lucide-react";
-import { siteConfig } from "../data/siteData";
 import Button from "../components/Button";
 
 export default function Landscaping() {
-  useEffect(() => {
-    document.title = "Luxury Landscaping Services Hyderabad | Vanora";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Vanora designs and installs luxury landscapes for premium residences, villas, and commercial properties in Hyderabad, blending architecture with native botanicals."
-      );
-    }
-  }, []);
-
   const features = [
     {
       title: "Landscape Architecture",

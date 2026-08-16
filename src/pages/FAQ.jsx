@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { faqData } from "../data/siteData";
@@ -40,17 +40,6 @@ function AccordionItem({ question, answer, isOpen, onClick }) {
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
-
-  useEffect(() => {
-    document.title = "Frequently Asked Questions | Vanora — Botanical Design";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Browse common questions regarding Vanora's landscaping design cycles, interior styling, custom corporate brand gifts, and garden maintenance options in Hyderabad."
-      );
-    }
-  }, []);
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);

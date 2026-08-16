@@ -5,10 +5,17 @@ import { navigationLinks } from "../data/siteData";
 import Button from "./Button";
 
 export default function Navbar() {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  const [prevPath, setPrevPath] = useState(location.pathname);
   const isHome = location.pathname === "/";
+
+  // Close the mobile menu on route change (render-time state adjustment)
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,11 +29,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close mobile menu on page transition
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
 
   return (
     <nav

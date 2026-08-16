@@ -1,29 +1,7 @@
-import { useEffect } from "react";
 import { motion } from "motion/react";
-import { siteConfig } from "../data/siteData";
 import Button from "../components/Button";
 
-const fader = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
-};
-
 export default function About() {
-  useEffect(() => {
-    document.title = "About Us | Vanora — Luxury Botanical Design Studio";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Learn about Vanora's design philosophy, botanical craftsmanship, and dedicated landscaping and indoor styling team in Hyderabad, India."
-      );
-    }
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}

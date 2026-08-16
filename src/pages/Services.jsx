@@ -1,21 +1,8 @@
-import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Check } from "lucide-react";
 import { servicesData, siteConfig } from "../data/siteData";
 import Button from "../components/Button";
 
 export default function Services() {
-  useEffect(() => {
-    document.title = "Our Services | Vanora — Luxury Botanical Services";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Explore premium landscaping, indoor plant styling, balcony styling, and luxury corporate gifting services in Hyderabad by Vanora."
-      );
-    }
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}

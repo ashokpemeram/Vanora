@@ -1,8 +1,6 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { ArrowDown, ArrowRight, Check } from "lucide-react";
-import { siteConfig, servicesData, whyChooseVanora, projectsData, processSteps, testimonialsData } from "../data/siteData";
+import { ArrowDown } from "lucide-react";
+import { siteConfig, servicesData, whyChooseVanora } from "../data/siteData";
 import Button from "../components/Button";
 
 // Framer motion variants for subtle, slow animations
@@ -15,26 +13,7 @@ const fader = {
   }
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
 export default function Home() {
-  // Dynamic SEO Setup
-  useEffect(() => {
-    document.title = siteConfig.seo.defaultTitle;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", siteConfig.seo.defaultDescription);
-    }
-  }, []);
-
   return (
     <div className="overflow-hidden">
       {/* 1. HERO SECTION */}

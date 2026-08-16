@@ -1,4 +1,3 @@
-import { Phone } from "lucide-react";
 import { siteConfig } from "../data/siteData";
 
 export default function WhatsAppFloat() {

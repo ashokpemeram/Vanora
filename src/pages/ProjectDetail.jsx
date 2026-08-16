@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, MapPin, Tag } from "lucide-react";
 import { projectsData } from "../data/siteData";
@@ -7,21 +6,7 @@ import Button from "../components/Button";
 
 export default function ProjectDetail() {
   const { projectId } = useParams();
-  const navigate = useNavigate();
   const project = projectsData.find((p) => p.id === projectId);
-
-  useEffect(() => {
-    if (project) {
-      document.title = `${project.title} | Vanora selected works`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute(
-          "content",
-          `Read the design approach and plant selection details for the project ${project.title} in ${project.location} by Vanora.`
-        );
-      }
-    }
-  }, [project]);
 
   if (!project) {
     return (

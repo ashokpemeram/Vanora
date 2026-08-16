@@ -18,6 +18,9 @@ export default function Footer() {
           <div className="pt-2 text-xs uppercase tracking-widest text-sage">
             Hyderabad, India
           </div>
+          <p className="text-xs font-sans text-ivory/40 leading-relaxed max-w-sm">
+            Serving luxury residences & businesses across Jubilee Hills, Banjara Hills, Gachibowli, Kokapet, Hitech City, Madhapur, Kondapur & Manikonda.
+          </p>
         </div>
 
         {/* Navigation Column */}
@@ -40,6 +43,9 @@ export default function Footer() {
             </li>
             <li>
               <Link to="/corporate-gifting" className="hover:text-ivory transition-colors">Corporate Gifting</Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:text-ivory transition-colors">FAQ</Link>
             </li>
             <li>
               <Link to="/contact" className="hover:text-ivory transition-colors">Contact</Link>

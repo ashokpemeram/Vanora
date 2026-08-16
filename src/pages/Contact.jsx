@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { siteConfig } from "../data/siteData";
@@ -15,24 +15,27 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    document.title = "Contact Us | Vanora — Luxury Botanical Design Hyderabad";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Start a conversation with Vanora. Request a landscape design consultation or indoor plant styling walk-through in Jubilee Hills, Banjara Hills, Gachibowli, or Kokapet."
-      );
-    }
-  }, []);
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Consultation Enquiry Form Submitted:", formData);
+
+    const enquiryMessage = [
+      "Hello Vanora, I would like to request a consultation.",
+      "",
+      "*Consultation Enquiry*",
+      `*Name:* ${formData.name}`,
+      `*Email:* ${formData.email}`,
+      `*Phone:* ${formData.phone}`,
+      `*Service:* ${formData.service}`,
+      `*Location:* ${formData.location}`,
+      `*Details:* ${formData.message}`
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(enquiryMessage)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 

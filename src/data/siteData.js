@@ -6,24 +6,68 @@ export const siteConfig = {
   tagline: "Where Nature Meets Refined Living.",
   description: "Thoughtfully designed landscapes, curated planting, and sophisticated gifting experiences for homes, businesses, and exceptional occasions in Hyderabad.",
   
-  // Contact details - Easily replaceable placeholders
+  // Live production URL - used for canonical tags, sitemap, Open Graph, and schema markup
+  siteUrl: "https://vanoragardens.com",
+
+  // Business identity / NAP (Name, Address, Phone) - kept consistent across schema, footer, and contact
+  business: {
+    name: "Vanora",
+    legalName: "Vanora Gardens",
+    alternateName: "Vanora Landscaping & Plant Styling",
+    description: "Luxury landscaping, house planting, and premium botanical corporate gifting studio in Hyderabad, India.",
+    logo: "/favicon.svg",
+    priceRange: "₹₹₹₹",
+    currencyAccepted: "INR",
+    paymentAccepted: "Cash, UPI, Bank Transfer",
+    geo: {
+      latitude: 17.4990168,
+      longitude: 78.4018135
+    },
+    openingHours: [
+      "Mo-Sa 09:00-19:00",
+      "Su 10:00-14:00"
+    ]
+  },
+  
+  // Contact details - NAP used across the site and structured data
   contact: {
-    phone: "+91 91774 95073", // Place holder
+    phone: "+91 91774 95073",
     phoneRaw: "+919177495073",
-    email: "vanoragarden@gmail.com", // Place holder
-    whatsapp: "+91 91774 95073", // Place holder
+    email: "vanoragarden@gmail.com",
+    whatsapp: "+91 91774 95073",
     whatsappRaw: "+919177495073",
-    instagram: "https://www.instagram.com/vanora.garden?igsh=MTY5cG9idWVjOWF1cg==",
+    instagram: "https://www.instagram.com/vanora.garden",
     linkedin: "https://linkedin.com/company/vanora-botanical",
-    address: "Vanora gardens, S NILAYAM, Sri ram nagar colony , Jahnavi intermediate collage, plot no : 897, opposite street GATTU, Hyderabad, Manikonda, Telangana 500089",
+    address: "Vanora gardens, S NILAYAM, Sri ram nagar colony, Jahnavi intermediate collage, plot no: 897, opposite street GATTU, Hyderabad, Manikonda, Telangana 500089",
+    addressLocality: "Hyderabad",
+    addressRegion: "Telangana",
+    postalCode: "500089",
+    addressCountry: "IN",
+    googleMapsUrl: "https://maps.app.goo.gl/Je1a5S3aruk65jyQ6",
     whatsappMessage: "Hello Vanora, I would like to know more about your premium services."
   },
+
+  // Neighbourhoods served for local SEO targeting
+  serviceAreas: [
+    "Jubilee Hills",
+    "Banjara Hills",
+    "Gachibowli",
+    "Kokapet",
+    "Hitech City",
+    "Madhapur",
+    "Kondapur",
+    "Manikonda",
+    "Financial District",
+    "Nanakramguda"
+  ],
   
   // SEO Meta defaults
   seo: {
-    defaultTitle: "Vanora | Luxury Landscaping & Plant Styling in Hyderabad",
+    defaultTitle: "Luxury Landscaping & Plant Styling in Hyderabad | Vanora",
     defaultDescription: "Vanora creates refined landscapes, curated house planting, and premium corporate gifting experiences in Hyderabad. Discover thoughtful botanical design for exceptional spaces.",
-    defaultKeywords: "Luxury landscaping services in Hyderabad, Landscaping company in Hyderabad, Premium landscaping Hyderabad, Landscape design Hyderabad, Garden design Hyderabad, House plant services Hyderabad, Indoor plants Hyderabad, Corporate gifting Hyderabad, Premium corporate gifts Hyderabad, Plant gifting Hyderabad, Luxury garden design Hyderabad"
+    defaultKeywords: "Luxury landscaping services in Hyderabad, Landscaping company in Hyderabad, Premium landscaping Hyderabad, Landscape design Hyderabad, Garden design Hyderabad, House plant services Hyderabad, Indoor plants Hyderabad, Corporate gifting Hyderabad, Premium corporate gifts Hyderabad, Plant gifting Hyderabad, Luxury garden design Hyderabad",
+    ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    ogImageAlt: "Luxury landscaping by Vanora in Hyderabad"
   }
 };
 

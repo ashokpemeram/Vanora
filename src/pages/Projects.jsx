@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { projectsData } from "../data/siteData";
@@ -6,17 +6,6 @@ import { ArrowRight } from "lucide-react";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
-  
-  useEffect(() => {
-    document.title = "Our Selected Works | Vanora — Botanical Portfolio";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Browse Vanora's selected landscaping, house planting, and corporate gifting projects in Hyderabad. Architectural plant styling for luxury homes."
-      );
-    }
-  }, []);
 
   const categories = ["All", "Landscaping", "Plant Styling", "Gifting"];
 

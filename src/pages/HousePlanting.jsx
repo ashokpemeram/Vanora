@@ -1,21 +1,7 @@
-import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Check } from "lucide-react";
-import { siteConfig } from "../data/siteData";
 import Button from "../components/Button";
 
 export default function HousePlanting() {
-  useEffect(() => {
-    document.title = "Indoor Plant Styling & Terrace Gardens Hyderabad | Vanora";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Curate indoor and terrace environments with Vanora's premium plant styling. We select statement specimens, artisan vessels, and layout botanical styling for Hyderabad homes."
-      );
-    }
-  }, []);
-
   const stylingSteps = [
     {
       title: "Lighting & Spatial Audit",
