@@ -29,7 +29,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-6 space-y-8">
             <h2 className="text-3xl md:text-4xl font-serif text-primary font-light">
-              We shape environments that elevate quality of life.
+              We shape environments that elevate quality of life life.
             </h2>
             <div className="space-y-6 font-sans text-sm text-charcoal/70 leading-relaxed font-light">
               <p>
